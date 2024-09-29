@@ -1,33 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import './App.css'
+import Navbar from "./components/Navbar"
+import CartList from './components/CartList'
 
 function App() {
-  const [count, setCount] = useState(0)
+  //State jumlah kuantitas Item
+  const [quantity, setQuantity] = useState(5)
+
+  //dua fungsi dibawah akan digunakan di dalam component Counter (props drilling)
+  const counterKurang = () => {
+    quantity > 5 ? setQuantity(quantity - 1) : quantity
+  }
+
+  const counterTambah = () => {
+    setQuantity(quantity + 1)
+  }
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar size={quantity} />
+      <CartList counterKurang={counterKurang} counterTambah={counterTambah} />
     </>
   )
 }

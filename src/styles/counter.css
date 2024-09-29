@@ -1,0 +1,41 @@
+.harga{
+    margin: 0 1rem 0 8rem;
+}
+
+.bayar{
+    padding: 1px 10px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.bayar:hover{
+    background-color: rgb(36, 145, 36);
+    color: white;
+}
+
+.hapus{
+    padding: 1px 10px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.hapus:hover{
+    background-color: rgb(145, 36, 36);
+    color: white;
+}
+
+@media (max-width: 630px) {
+    .harga {
+      margin-left: 2rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .harga {
+      margin-left: 2rem;
+    }
+
+    .btn2{
+        margin-top: 2rem;
+    }
+}
