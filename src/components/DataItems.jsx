@@ -4,6 +4,10 @@ import { useState } from "react"
 
 const DataItems = ({ counterKurang, counterTambah }) => {
 
+    //price={item.price} dibawah, menjadi props dan akan dioper ke
+    //melalui CartItem hingga ke Counter dan digunakan di Counter
+    //karena data harga berasal dari API
+
     //fetching data dari API
     const [dataItems, setDataItems] = useState([])
 
