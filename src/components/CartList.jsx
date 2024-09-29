@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-const CartList = () => {
+import DataItems from "./DataItems"
+const CartList = ({ counterKurang, counterTambah }) => {
 
     return (
         <>
@@ -10,7 +11,7 @@ const CartList = () => {
                 <p className="underline decoration-violet-800 ml-4">Kuantitas</p>
                 <p className="underline decoration-violet-800">H. Total</p>
             </div>
-            
+            <DataItems counterKurang={counterKurang} counterTambah={counterTambah} />
         </div>
         
         </>
